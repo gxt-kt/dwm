@@ -2,6 +2,8 @@
 
 b站简单演示链接：[https://www.bilibili.com/video/BV1hY4y127ef](https://www.bilibili.com/video/BV1hY4y127ef)
 
+安装教程视频：https://www.bilibili.com/video/BV1co4y1z7BT
+
 **如果你的觉得这个DWM还不错，麻烦点个star，谢谢! 这会是对我最大的激励**
 
 ***
@@ -13,7 +15,7 @@ b站简单演示链接：[https://www.bilibili.com/video/BV1hY4y127ef](https://w
 
 ## 说在前面：
 
-**dwm安装视频教程和statusbar快速扩展教程已经新建文件夹了，稍等**
+**dwm安装视频教程看最上面链接**
 
 1. 遇到安装问题可以直接提issue或者b站底下评论。
 
@@ -103,7 +105,7 @@ b站简单演示链接：[https://www.bilibili.com/video/BV1hY4y127ef](https://w
 1. ~~statusbar中音量功能中加入了一个显示蓝牙设备剩余电量功能,但是目前没法稳定使用,一般在刚开始连接时可以正常检测到,后面就不行. 这个暂时解决不了,只能说暂时不使用功能,需要等待上游更新或arch内核更新. (arch的蓝牙经常不稳定)~~
   
     已经修复，采用其它途径获取蓝牙音量，目前还比较稳定
-   
+
 
 ## 一些其它值得讲的点
 1. 对于一些特殊按键不知道名字，可以在终端内执行`xev`，就可以显示当前所按按键详细信息
