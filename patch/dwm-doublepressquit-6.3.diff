@@ -1,0 +1,57 @@
+From 1ff5d32e691fa8fb001d0619b72da11ef8232009 Mon Sep 17 00:00:00 2001
+From: Sebastian Karlsen <suckless@karlsen.fr>
+Date: Tue, 1 Mar 2022 14:49:03 +0100
+Subject: [PATCH] Only quit dwm if binding is pressed twice quickly
+
+---
+ config.def.h |  3 +++
+ dwm.c        | 19 ++++++++++++++++++-
+ 2 files changed, 21 insertions(+), 1 deletion(-)
+
+diff --git a/config.def.h b/config.def.h
+index a2ac963..8123671 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -21,6 +21,9 @@ static const char *colors[][3]      = {
+ /* tagging */
+ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+ 
++/* Lockfile */
++static char lockfile[] = "/tmp/dwm.lock";
++
+ static const Rule rules[] = {
+ 	/* xprop(1):
+ 	 *	WM_CLASS(STRING) = instance, class
+diff --git a/dwm.c b/dwm.c
+index a96f33c..d55f186 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -1252,7 +1252,24 @@ propertynotify(XEvent *e)
+ void
+ quit(const Arg *arg)
+ {
+-	running = 0;
++	FILE *fd = NULL;
++	struct stat filestat;
++
++	if ((fd = fopen(lockfile, "r")) && stat(lockfile, &filestat) == 0) {
++		fclose(fd);
++
++		if (filestat.st_ctime <= time(NULL)-2)
++			remove(lockfile);
++	}
++
++	if ((fd = fopen(lockfile, "r")) != NULL) {
++		fclose(fd);
++		remove(lockfile);
++		running = 0;
++	} else {
++		if ((fd = fopen(lockfile, "a")) != NULL)
++			fclose(fd);
++	}
+ }
+ 
+ Monitor *
+-- 
+2.35.1
+
