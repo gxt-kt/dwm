@@ -34,10 +34,9 @@ static const unsigned int snap            = 10;        /* 边缘依附宽度 */
 
 
 //=============================================================================
-// 字体配置
+// 字体配置 所用到的字体本仓库已经提供，放到了fonts目录下，需要自己移动到/usr/share/fonts目录下
 //=============================================================================
 static const char *fonts[]               = {
-      //"monospace:size=15",
 			"Monaco:style=Regular:size=11",
 			"Symbols Nerd Font:style=2048-em:size=17",
 		  "Microsoft YaHei:size=11:style=Regular:antialias=true:autohint:true",
