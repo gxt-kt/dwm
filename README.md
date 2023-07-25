@@ -4,8 +4,23 @@ b站简单演示链接：[https://www.bilibili.com/video/BV1hY4y127ef](https://w
 
 安装教程视频：https://www.bilibili.com/video/BV1co4y1z7BT
 
+
+
+**重要的事情说三遍，大多数人碰到过字体问题，为了不再麻烦大家自己找字体，已经把我用到的所有字体放到了fonts目录下，记得复制到`/usr/share/fonts/`目录下**
+
+**重要的事情说三遍，大多数人碰到过字体问题，为了不再麻烦大家自己找字体，已经把我用到的所有字体放到了fonts目录下，记得复制到`/usr/share/fonts/`目录下**
+
+**重要的事情说三遍，大多数人碰到过字体问题，为了不再麻烦大家自己找字体，已经把我用到的所有字体放到了fonts目录下，记得复制到`/usr/share/fonts/`目录下**
+
+
+
+***
+
 **如果你的觉得这个DWM还不错，麻烦点个star，谢谢! 这会是对我最大的激励**
 
+**如果你的觉得这个DWM还不错，麻烦点个star，谢谢! 这会是对我最大的激励**
+
+**如果你的觉得这个DWM还不错，麻烦点个star，谢谢! 这会是对我最大的激励**
 ***
 
 本仓库主要 fork 自yaoccc https://github.com/yaocccc/dwm 并修改了自己需要的内容
